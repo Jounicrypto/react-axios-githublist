@@ -8,7 +8,8 @@ class App extends React.Component{
     this.state = {
       users:[],
       data:[],
-      login:[],
+      login:"",
+      avatar_id:"",
       repos_url:"",
       avatar_url:"",
       url:"",
@@ -40,9 +41,14 @@ componentDidMount = () =>{
         return(
           <div key={value.id}>
             <li>{value.users}</li>
+            <li>{value.login}</li>
             <li>{value.repos_url}</li>
             <img src={value.repos_url}></img>
             <li>{value.avatar_url}</li>
+            <li>{value.avatar_id}</li>
+            <li>{value.html_url}</li>
+            
+
           </div>
         )
       })}
