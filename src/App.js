@@ -1,25 +1,55 @@
-import logo from './logo.svg';
+import React from 'react';
+import axios from 'axios';
 import './App.css';
 
-function App() {
+class App extends React.Component{
+  constructor(props){
+    super(props)
+    this.state = {
+      users:[],
+      data:[],
+      login:[],
+      repos_url:"",
+      avatar_url:"",
+      url:"",
+      html_url:""
+      
+    }
+  }
+
+componentDidMount = () =>{
+    axios.get("https://api.github.com/users")
+    .then(res =>{
+      // console.log(res)
+      this.setState({
+        users : res.data,
+        login : res.data
+      })
+    }).catch(err =>{
+      console.log(err)
+    })
+  }
+
+  render(){
+    console.log(this.state.users)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>List of Github Users</h1>
+      <ul>
+      {this.state.users.map((value, index)=>{
+        return(
+          <div key={value.id}>
+            <li>{value.users}</li>
+            <li>{value.repos_url}</li>
+            <img src={value.repos_url}></img>
+            <li>{value.avatar_url}</li>
+          </div>
+        )
+      })}
+      </ul>
     </div>
   );
+}
 }
 
 export default App;
