@@ -43,8 +43,8 @@ componentDidMount = () =>{
             <li>{value.users}</li>
             <li>{value.login}</li>
             <li>{value.repos_url}</li>
-            <img src={value.repos_url}></img>
-            <li>{value.avatar_url}</li>
+            <img src={value.avatar_url}></img>
+            <li>{value.repos_url}</li>
             <li>{value.avatar_id}</li>
             <li>{value.html_url}</li>
             
