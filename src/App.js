@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import './App.css';
+import ShowAllUsers from './components/ShowAllUsers';
 
 class App extends React.Component{
   constructor(props){
@@ -37,21 +38,7 @@ componentDidMount = () =>{
     <div className="App">
       <h1>List of Github Users</h1>
       <ul>
-      {this.state.users.map((value, index)=>{
-        return(
-          <div key={value.id}>
-            <li>{value.users}</li>
-            <li>{value.login}</li>
-            <li>{value.repos_url}</li>
-            <img src={value.avatar_url}></img>
-            <li>{value.repos_url}</li>
-            <li>{value.avatar_id}</li>
-            <li>{value.html_url}</li>
-            
-
-          </div>
-        )
-      })}
+      <ShowAllUsers users={this.state.users}/>
       </ul>
     </div>
   );
