@@ -6,7 +6,7 @@ export default class Repos extends Component {
         super(props);
     
         this.state ={
-            repos:[]
+            repos:[],
         }
     }
 
@@ -26,15 +26,10 @@ export default class Repos extends Component {
 
 
                 return(
-
-                    <div key={repo.index} className="repos">
-
+                    <div key={repo.index}>
                         <a href={repo.html_url}>{repo.name}</a>
-
                     </div>
-
                     )
-
 })}
             </div>
     )

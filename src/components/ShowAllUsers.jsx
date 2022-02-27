@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Repose from './Repos'
 
-
 export default class ShowAllUsers extends Component {
     constructor(props){
     super(props);
@@ -23,7 +22,7 @@ axios.get('http://api.github.com/users/Jounicrypto?client_id=930dc05feec17fe2f94
 
 
 render() {
-    console.log(this.state.alllists);
+    // console.log(this.state.alllists);
 
 return (
 

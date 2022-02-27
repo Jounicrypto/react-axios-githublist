@@ -10,8 +10,6 @@ import { BrowserRouter as Router ,Route,Switch } from 'react-router-dom';
 import HomePage from './components/HomePage';
 
 
-
-
 function App() {
   return (
   <Router>
@@ -20,20 +18,11 @@ function App() {
       
       <Switch>
       
+        <Route  exact path='/' component = { HomePage }/>
       
-      <Route  exact path='/' component = { HomePage }/>
-      
-      
-      
-    
       </Switch>
-      
-      
-  
-
-    
     </div>
-    </Router>
+  </Router>
   );
 }
 
