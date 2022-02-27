@@ -27,10 +27,10 @@ render() {
 
 return (
 
-    <div className="alllist">   
-        <div className='header-section'>
+    <div>   
+        <div>
         <img src={this.state.alllists.avatar_url} alt="" />
-        <div className='user-infos'>
+        <div>
         <p><strong>UserName:</strong> {this.state.alllists.login}</p>
         <p><strong>FullName:</strong> {this.state.alllists.name}</p>
         <p><strong>Email Adress:</strong> {this.state.alllists.email}</p>
@@ -38,11 +38,8 @@ return (
         
         </div>
     </div>
-    <h2>User Repository</h2>
-
-
-<Repose/>
-
+        <h2>User Repository</h2>
+            <Repose/>
     </div>
 )
 }

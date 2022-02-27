@@ -36,9 +36,6 @@ export default class Repos extends Component {
                     )
 
 })}
-
-
-
             </div>
     )
 }
