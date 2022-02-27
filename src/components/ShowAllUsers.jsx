@@ -37,7 +37,7 @@ return (
         
         </div>
     </div>
-        <h2>User Repository</h2>
+        <h2>User Repositories</h2>
             <Repose/>
     </div>
 )
